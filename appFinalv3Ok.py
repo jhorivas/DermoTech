@@ -114,19 +114,21 @@ def comparacionesActivos():
     varTipoPiel = ""
     combinacionTipo = ""
 
-    if((p0 == "Tirante") and (p1 == "Tirante") and (p2 == "Tirante") and (p3 == "Si") and ((p4 == "Si") or (p4 == "N/A"))):
+    if((p0 == "Tirante") and (p1 == "Tirante") and (p2 == "Tirante") and (p3 == "Si") and (p4 == "Si")):
         varTipoPiel = "Piel Seca-Sensible"
+        combinacionTipo = "TTTS"
 
     if((p0 == "Tirante") and (p1 == "Tirante") and (p2 == "Tirante") and (p3 == "Si") and ((p4 == "No") or (p4 == "N/A"))):
         varTipoPiel = "Piel Seca-Sensible"
+        combinacionTipo = "TTTN"
 
-    if((p0 == "Tirante") and (p1 == "Tirante") and (p2 == "Tirante") and (p3 == "No") and ((p4 == "Si") or (p4 == "N/A"))):
+    if((p0 == "Tirante") and (p1 == "Tirante") and (p2 == "Tirante") and (p3 == "No") and (p4 == "Si")):
         varTipoPiel = "Piel Seca"
 
     if((p0 == "Tirante") and (p1 == "Tirante") and (p2 == "Tirante") and (p3 == "No") and ((p4 == "No") or (p4 == "N/A"))):
         varTipoPiel = "Piel Seca"
 
-    if((p0 == "Tirante") and (p1 == "Tirante") and (p2 == "Oleosa") and (p3 == "Si") and ((p4 == "Si") or (p4 == "N/A"))):
+    if((p0 == "Tirante") and (p1 == "Tirante") and (p2 == "Oleosa") and (p3 == "Si") and (p4 == "Si")):
         varTipoPiel = "Piel Mixta-Sensible"
         combinacionTipo = "TTO"
 
@@ -162,13 +164,13 @@ def comparacionesActivos():
         varTipoPiel = "Piel Grasa-Sensible"
         combinacionTipo = "TOO"
 
-    if((p0 == "Tirante") and (p1 == "Oleosa") and (p2 == "Oleosa") and (p3 == "No") and ((p4 == "Si") or (p4 == "N/A"))):
+    if((p0 == "Tirante") and (p1 == "Oleosa") and (p2 == "Oleosa") and (p3 == "No") and (p4 == "Si")):
         varTipoPiel = "Piel Grasa"
-        combinacionTipo = "TOO"
+        combinacionTipo = "TOOS"
 
     if((p0 == "Tirante") and (p1 == "Oleosa") and (p2 == "Oleosa") and (p3 == "No") and ((p4 == "No") or (p4 == "N/A"))):
         varTipoPiel = "Piel Grasa"
-        combinacionTipo = "TOO"
+        combinacionTipo = "TOON"
 
     # if((p0 == "Oleosa") and (p1 == "Tirante") and (p2 == "Tirante") and (p3 == "Si") and (p4 == "Si")):
     #     varTipoPiel = "NO EXISTE LA COMBINACIÓN"
@@ -182,21 +184,21 @@ def comparacionesActivos():
     # if((p0 == "Oleosa") and (p1 == "Tirante") and (p2 == "Tirante") and (p3 == "No") and (p4 == "No")):
     #     varTipoPiel = "NO EXISTE LA COMBINACIÓN"
 
-    if((p0 == "Oleosa") and (p1 == "Tirante") and (p2 == "Oleosa") and (p3 == "Si") and ((p4 == "Si") or (p4 == "N/A"))):
+    if((p0 == "Oleosa") and (p1 == "Tirante") and (p2 == "Oleosa") and (p3 == "Si") and (p4 == "Si")):
         varTipoPiel = "Piel Mixta-Sensible"
-        combinacionTipo = "OTO"
+        combinacionTipo = "OTOS"
 
     if((p0 == "Oleosa") and (p1 == "Tirante") and (p2 == "Oleosa") and (p3 == "Si") and ((p4 == "No") or (p4 == "N/A"))):
         varTipoPiel = "Piel Mixta-Sensible"
-        combinacionTipo = "OTO"
+        combinacionTipo = "OTON"
 
-    if((p0 == "Oleosa") and (p1 == "Tirante") and (p2 == "Oleosa") and (p3 == "No") and ((p4 == "Si") or (p4 == "N/A"))):
+    if((p0 == "Oleosa") and (p1 == "Tirante") and (p2 == "Oleosa") and (p3 == "No") and (p4 == "Si")):
         varTipoPiel = "Piel Mixta"
-        combinacionTipo = "OTO"
+        combinacionTipo = "OTOS"
 
     if((p0 == "Oleosa") and (p1 == "Tirante") and (p2 == "Oleosa") and (p3 == "No") and ((p4 == "No") or (p4 == "N/A"))):
         varTipoPiel = "Piel Mixta"
-        combinacionTipo = "OTO"
+        combinacionTipo = "OTON"
 
     # if((p0 == "Oleosa") and (p1 == "Oleosa") and (p2 == "Tirante") and (p3 == "Si") and (p4 == "Si")):
     #     varTipoPiel = "NO EXISTE LA COMBINACIÓN"
@@ -234,89 +236,89 @@ def principiosActivos(varTipoPiel,combinacionTipo):
     rec = ""
     rec2 = ""
 
-    # if (varTipoPiel == "Piel Grasa"): #Combinacion: Tirante, Oleosa, Oleosa /// Maquillaje: NO
-    #     activo = "Ácido hialuronico, Glicerina, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamina B6, Ramnosa, Bakuchiol."
-    #     linea = "Sensibio-Sebium"
-    #     rec = "Se recomienda utilizar una rutina de limpieza dos veces al día tipo espuma, gel o loción, hidratación, tratamiento antiacné y fotoprotección."
-    #     rec2 = "Oleosidad en todo el rostro, no solo en la zona T. Poros dilatados o visibles y pueden aparecer brotes de acné, espinillas y otras imperfecciones."
+    if (varTipoPiel == "Piel Seca"):
+        activo = "Ácido hialuronico, Vitamina E, Glucósido de coco, Glicerina, Canola, Xilitol, Extracto de semilla de manzana. "
+        linea = "Sensibio-Hydrabio"
+        rec = "Se recomienda mantener una rutina diaria de limpieza y mantener una hidratación durante la mañana y en la noche para proteger la piel de agresiones, indispensable fotoproteger la piel."
+        rec2 = "Sensación de tirantez en todo el rostro, los poros son casi imperceptibles, además de agua carece de lípidos y dependiendo de la sequedad será escamosa."
 
-    if ((varTipoPiel == "Piel Grasa") and (combinacionTipo == "TOO")): #Combinacion: Tirante, Oleosa, Oleosa /// Maquillaje: N/A
-        activo = "Ácido hialuronico, Glicerina, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamina B6, Gluconato de zinc."
+    if ((varTipoPiel == "Piel Seca-Sensible")  and (combinacionTipo == "TTTN")): #Si Maquillaje: No o N/A
+        activo = "Ácido hialurónico, Vitamina E, Enoxolona, Alantoina, Glucósido de coco, Glicerina, Canola, Xilitol, Manitol, Ramnosa, Carnsina."
+        linea = "Sensibio-Hydrabio"
+        rec = "Se recomienda mantener una rutina diaria de limpieza utilizando productos que protejan la piel de agresiones externas, evita frotar la piel porque son movimientos que puede irritar la piel. Es fundamental mantener una hidratación en la mañana y en la noche para mejorar el aspecto de la piel y aumentar el umbral de tolerancia de la piel, indispensable fotoproteger la piel."
+        rec2 = "Sensación de tirantez en todo el rostro, los poros son casi imperceptibles, además de agua carece de lípidos, dependiendo de la sequedad será escamosa y pueden aparecer resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
+
+    if ((varTipoPiel == "Piel Seca-Sensible")  and (combinacionTipo == "TTTS")): #Si Maquillaje: Si
+        activo = "Ácido hialurónico, Vitamina E, Enoxolona, Alantoina, Glucósido de coco, Glicerina, Canola, Xilitol, Polifenoles de salvia roja."
+        linea = "Sensibio-Hydrabio"
+        rec = "Se recomienda mantener una rutina diaria de limpieza utilizando productos que protejan la piel de agresiones externas, evita frotar la piel porque son movimientos que puede irritar la piel. Es fundamental mantener una hidratación en la mañana y en la noche para mejorar el aspecto de la piel y aumentar el umbral de tolerancia de la piel, indispensable fotoproteger la piel."
+        rec2 = "Sensación de tirantez en todo el rostro, los poros son casi imperceptibles, además de agua carece de lípidos, dependiendo de la sequedad será escamosa y pueden aparecer resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
+
+    if ((varTipoPiel == "Piel Mixta")  and (combinacionTipo == "TTO")): #Combinacion: Tirante, Tirante, Oleosa //// Combinacion: Oleosa, Tirante, Oleosa. Maquillaje: N/A
+        activo = "Ácido hialurónico, Glicerina, Xilitol, Ácido agárico, Ácido salicílico, Enoxolona, Sulfato de zinc, Sulfato de cobre."
+        linea = "Sensibio-Sebium"
+        rec = "Se recomienda utilizar una rutina de limpieza dos veces al día tipo espuma, gel o loción, hidratación y fotoprotección."
+        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles y secos."
+
+    if ((varTipoPiel == "Piel Mixta") and (combinacionTipo == "OTOS")): #Combinacion: Oleosa, Tirante, Oleosa. Maquillaje: NO
+        activo = "Ácido hialurónico, Xilitol, Ácido agárico, Ácido salicílico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamnia B6, Silica, Dioxido de titanium, Gingo biloba."
+        linea = "Sensibio-Sebium"
+        rec = "Se recomienda utilizar una rutina de limpieza dos veces al día tipo espuma, gel o loción, hidratación y fotoprotección."
+        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles y secos."
+    
+    if ((varTipoPiel == "Piel Mixta") and (combinacionTipo == "OTON")): #Combinacion: Oleosa, Tirante, Oleosa. Maquillaje: N/A
+        activo = "Ácido hialurónico, Glicerina, Xilitol, Ácido agárico, Ácido salicílico, Enoxolona, Sulfato de zinc, Sulfato de cobre."
+        linea = "Sensibio-Sebium"
+        rec = "Se recomienda utilizar una rutina de limpieza dos veces al día tipo espuma, gel o loción, hidratación y fotoprotección."
+        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles y secos."
+
+    if ((varTipoPiel == "Piel Mixta-Sensible") and (combinacionTipo == "TTO")): #Combinacion: Tirante, Tirante, Oleosa --- Maquillaje: Si, No, N/A
+        activo = "Ácido hialurónico, Glicerina, Xilitol, Ácido agárico, Ácido salicílico, Enoxolona, Sulfato de zinc, Sulfato de cobre."
+        linea = "Sensibio-Sebium"
+        rec = "Se recomienda utilizar productos de limpieza adecuados para tu tipo de piel en especial agua micelar o tónicos, adicionalmente productos que ayuden a minimizar los poros en la zona T y aplicar hidratante tipo textura serum, gel o emulsión, indispensable fotoproteger la piel."
+        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles, secos y pueden aparecer resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
+    
+    if ((varTipoPiel == "Piel Mixta-Sensible") and (combinacionTipo == "OTOS")): #Combinacion: Oleosa, Tirante, Oleosa /// Maquillaje: Si
+        activo = "Ácido hialurónico, Glicerina, Xilitol, Ácido agárico, Ácido salicílico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamnia B6, Silica, Dióxido de titanium, Gingo biloba."
+        linea = "Sensibio-Sebium"
+        rec = "Se recomienda utilizar productos de limpieza adecuados para tu tipo de piel en especial agua micelar o tónicos, adicionalmente productos que ayuden a minimizar los poros en la zona T y aplicar hidratante tipo textura serum, gel o emulsión, indispensable fotoproteger la piel."
+        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles, secos y pueden aparecer resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
+
+    if ((varTipoPiel == "Piel Mixta-Sensible") and (combinacionTipo == "OTON")): #Combinacion: Oleosa, Tirante, Oleosa /// Maquillaje: No o N/A
+        activo = "Ácido hialurónico, Glicerina, Xilitol, Ácido agárico, Ácido salicílico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Perlita, Silica, Propil galato."
+        linea = "Sensibio-Sebium"
+        rec = "Se recomienda utilizar productos de limpieza adecuados para tu tipo de piel en especial agua micelar o tónicos, adicionalmente productos que ayuden a minimizar los poros en la zona T y aplicar hidratante tipo textura serum, gel o emulsión, indispensable fotoproteger la piel."
+        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles, secos y pueden aparecer resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
+        
+    if ((varTipoPiel == "Piel Grasa") and (combinacionTipo == "TOOS")): #Combinacion: Tirante, Oleosa, Oleosa /// Maquillaje: Si
+        activo = "Ácido hialuronico, Glicerina, Xilitol, Ácido agárico, Ácido salicílico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamina B6, Ramnosa, Bakuchiol."
         linea = "Sensibio-Sebium"
         rec = "Se recomienda utilizar una rutina de limpieza dos veces al día tipo espuma, gel o loción, hidratación, tratamiento antiacné y fotoprotección."
         rec2 = "Oleosidad en todo el rostro, no solo en la zona T. Poros dilatados o visibles y pueden aparecer brotes de acné, espinillas y otras imperfecciones."
 
-    if ((varTipoPiel == "Piel Grasa")  and (combinacionTipo == "OOO")): #Combinacion: Oleosa, Oleosa, Oleosa /// Maquillaje: NO & N/A
-        activo = "Ácido hialuronico, Glicerina, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamina B6, Silica, Dióxido de titanium, Gingo biloba, Inflastop, Gluconato de zinc, Ácido glicolico, Glucosido de caprilo."
+    if ((varTipoPiel == "Piel Grasa") and (combinacionTipo == "TOON")): #Combinacion: Tirante, Oleosa, Oleosa /// Maquillaje: No o N/A
+        activo = "Ácido hialuronico, Glicerina, Xilitol, Ácido agárico, Ácido salicílico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamina B6, Gluconato de zinc."
+        linea = "Sensibio-Sebium"
+        rec = "Se recomienda utilizar una rutina de limpieza dos veces al día tipo espuma, gel o loción, hidratación, tratamiento antiacné y fotoprotección."
+        rec2 = "Oleosidad en todo el rostro, no solo en la zona T. Poros dilatados o visibles y pueden aparecer brotes de acné, espinillas y otras imperfecciones."
+
+    if ((varTipoPiel == "Piel Grasa")  and (combinacionTipo == "OOO")): #Combinacion: Oleosa, Oleosa, Oleosa /// Maquillaje: Si, No & N/A
+        activo = "Ácido hialuronico, agárico, salicílico y glicólico, Glicerina, Xilitol, Enoxolona, Sulfato de cobre y zinc, Vitamina B6, Silica, Dióxido de titanium, Gingo biloba, Inflastop, Gluconato de zinc, Glucósido de caprilo."
         linea = "Sensibio-Sebium"
         rec = "Se recomienda utilizar una rutina de limpieza dos veces al día tipo espuma, gel o loción, hidratación, tratamiento antiacné y fotoprotección."
         rec2 = "Oleosidad en todo el rostro, no solo en la zona T. Poros dilatados o visibles y pueden aparecer brotes de acné, espinillas y otras imperfecciones."
 
     if ((varTipoPiel == "Piel Grasa-Sensible")  and (combinacionTipo == "TOO")):
-        activo = "Ácido hialuronico, Glicerina, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamina B6, Ramnosa."
+        activo = "Ácido hialuronico, Glicerina, Xilitol, Ácido agárico, Ácido salicílico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamina B6, Ramnosa."
         linea = "Sensibio-Sebium"
         rec = "Se recomienda utilizar una rutina de limpieza para disminuir la oleosidad, calma la piel con un tónico, aplicar una hidratante específica para pieles grasas y sensibles, indispensable fotoproteger la piel."
         rec2 = "Oleosidad en todo el rostro, no solo en la zona T. Poros dilatados o visibles y pueden aparecer brotes de acné, espinillas, resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
     
     if ((varTipoPiel == "Piel Grasa-Sensible")  and (combinacionTipo == "OOO")):
-        activo = "Ácido hialuronico, Glicerina, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamnia B6, Silica, Dióxido de titanium, Gingo biloba, Inflastop, Gluconato de zinc."
+        activo = "Ácido hialuronico, Glicerina, Xilitol, Ácido agárico, Ácido salicílico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamnia B6, Silica, Dióxido de titanium, Gingo biloba, Inflastop, Gluconato de zinc."
         linea = "Sensibio-Sebium"
         rec = "Se recomienda utilizar una rutina de limpieza para disminuir la oleosidad, calma la piel con un tónico, aplicar una hidratante específica para pieles grasas y sensibles, indispensable fotoproteger la piel."
         rec2 = "Oleosidad en todo el rostro, no solo en la zona T. Poros dilatados o visibles y pueden aparecer brotes de acné, espinillas, resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
-
-    if (varTipoPiel == "Piel Seca"):
-        activo = "Ácido hialuronico, Vitamina E, Glucosido de coco, Glicerina, Canola, Xilitol, Extracto de semilla de manzana. "
-        linea = "Sensibio-Hydrabio"
-        rec = "Se recomienda mantener una rutina diaria de limpieza y mantener una hidratación durante la mañana y en la noche para proteger la piel de agresiones, indispensable fotoproteger la piel."
-        rec2 = "Sensación de tirantez en todo el rostro, los poros son casi imperceptibles, además de agua carece de lípidos y dependiendo de la sequedad será escamosa."
-
-    if (varTipoPiel == "Piel Seca-Sensible"): #Si N/A el maquillaje
-        activo = "Ácido hialurónico, Vitamina E, Enoxolona, Alantoina, Glucosido de coco, Glicerina, Canola, Xilitol, Manitol, Ramnosa, Carnsina."
-        linea = "Sensibio-Hydrabio"
-        rec = "Se recomienda mantener una rutina diaria de limpieza utilizando productos que protejan la piel de agresiones externas, evita frotar la piel porque son movimientos que puede irritar la piel. Es fundamental mantener una hidratación en la mañana y en la noche para mejorar el aspecto de la piel y aumentar el umbral de tolerancia de la piel, indispensable fotoproteger la piel."
-        rec2 = "Sensación de tirantez en todo el rostro, los poros son casi imperceptibles, además de agua carece de lípidos, dependiendo de la sequedad será escamosa y pueden aparecer resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
-
-    # if (varTipoPiel == "Piel Seca-Sensible"): #Si el maquillaje le dura
-    #     activo = "Ácido hialurónico, Vitamina E, Enoxolona, Alantoina, Glucosido de coco, Glicerina, Canola, Xilitol, Polifenoles de salvia roja."
-    #     linea = "Sensibio-Hydrabio"
-    #     rec = "Se recomienda mantener una rutina diaria de limpieza utilizando productos que protejan la piel de agresiones externas, evita frotar la piel porque son movimientos que puede irritar la piel. Es fundamental mantener una hidratación en la mañana y en la noche para mejorar el aspecto de la piel y aumentar el umbral de tolerancia de la piel, indispensable fotoproteger la piel."
-    #     rec2 = "Sensación de tirantez en todo el rostro, los poros son casi imperceptibles, además de agua carece de lípidos, dependiendo de la sequedad será escamosa y pueden aparecer resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
-
-    if ((varTipoPiel == "Piel Mixta")  and (combinacionTipo == "TTO")): #Combinacion: Tirante, Tirante, Oleosa //// Combinacion: Oleosa, Tirante, Oleosa. Maquillaje: N/A
-        activo = "Ácido hialurónico, Glicerina, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre."
-        linea = "Sensibio-Sebium"
-        rec = "Se recomienda utilizar una rutina de limpieza dos veces al día tipo espuma, gel o loción, hidratación y fotoprotección."
-        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles y secos."
-
-    if ((varTipoPiel == "Piel Mixta") and (combinacionTipo == "OTO")): #Combinacion: Oleosa, Tirante, Oleosa. Maquillaje: NO
-        activo = "Ácido hialurónico, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamnia B6, Silica, Dioxido de titanium, Gingo biloba."
-        linea = "Sensibio-Sebium"
-        rec = "Se recomienda utilizar una rutina de limpieza dos veces al día tipo espuma, gel o loción, hidratación y fotoprotección."
-        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles y secos."
-    
-    if ((varTipoPiel == "Piel Mixta") and (combinacionTipo == "OTO")): #Combinacion: Oleosa, Tirante, Oleosa. Maquillaje: N/A
-        activo = "Ácido hialurónico, Glicerina, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre."
-        linea = "Sensibio-Sebium"
-        rec = "Se recomienda utilizar una rutina de limpieza dos veces al día tipo espuma, gel o loción, hidratación y fotoprotección."
-        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles y secos."
-    
-    if ((varTipoPiel == "Piel Mixta-Sensible") and (combinacionTipo == "TTO")): #Combinacion: Tirante, Tirante, Oleosa
-        activo = "Ácido hialurónico, Glicerina, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre."
-        linea = "Sensibio-Sebium"
-        rec = "Se recomienda utilizar productos de limpieza adecuados para tu tipo de piel en especial agua micelar o tónicos, adicionalmente productos que ayuden a minimizar los poros en la zona T y aplicar hidratante tipo textura serum, gel o emulsión, indispensable fotoproteger la piel."
-        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles, secos y pueden aparecer resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
-    
-    # if ((varTipoPiel == "Piel Mixta-Sensible") and (combinacionTipo == "OTO")): #Combinacion: Oleosa, Tirante, Oleosa /// Maquillaje: NO
-    #     activo = "Ácido hialurónico, Glicerina, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Vitamnia B6, Silica, Dióxido de titanium, Gingo biloba."
-    #     linea = "Sensibio-Sebium"
-    #     rec = "Se recomienda utilizar productos de limpieza adecuados para tu tipo de piel en especial agua micelar o tónicos, adicionalmente productos que ayuden a minimizar los poros en la zona T y aplicar hidratante tipo textura serum, gel o emulsión, indispensable fotoproteger la piel."
-    #     rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles, secos y pueden aparecer resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
-
-    if ((varTipoPiel == "Piel Mixta-Sensible") and (combinacionTipo == "OTO")): #Combinacion: Oleosa, Tirante, Oleosa /// Maquillaje: N/A
-        activo = "Ácido hialurónico, Glicerina, Xilitol, Ácido agarico, Ácido salicilico, Enoxolona, Sulfato de zinc, Sulfato de cobre, Perlita, Silica, Propil galato."
-        linea = "Sensibio-Sebium"
-        rec = "Se recomienda utilizar productos de limpieza adecuados para tu tipo de piel en especial agua micelar o tónicos, adicionalmente productos que ayuden a minimizar los poros en la zona T y aplicar hidratante tipo textura serum, gel o emulsión, indispensable fotoproteger la piel."
-        rec2 = "Presenta un aspecto brillante sobre todo en la llamada zona T, presenta pómulos con poros imperceptibles, secos y pueden aparecer resequedad, molestia, rigidez, tirantez, picor, ardor y otras imperfecciones."
     return activo,linea,rec,rec2
 
 # Método para generar el PDF final de diagnóstico usando ReportLAB Python
@@ -452,7 +454,7 @@ def genPDFLocal(imperfeccionValue,prom,varTipoPiel,activo,linea,rec,rec2):
     # estilo_normal = getSampleStyleSheet()["Normal"]
     estilo_personalizado = ParagraphStyle(
         "mi_estilo",
-        fontSize=20,
+        fontSize=19,
         fontName="Helvetica",
         leading=18,
         alignment=TA_JUSTIFY
@@ -462,7 +464,7 @@ def genPDFLocal(imperfeccionValue,prom,varTipoPiel,activo,linea,rec,rec2):
         "negrita",
         parent=estilo_personalizado,  # Heredar del estilo personalizado
         fontName="Helvetica-Bold",
-        textColor="purple"
+        # textColor="purple"
     )
 
     text = rec2
