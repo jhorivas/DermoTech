@@ -360,7 +360,7 @@ def genPDFLocal(imperfeccionValue,prom,varTipoPiel,activo,linea,rec,rec2):
         c.drawImage(fotoia, 37*mm, 150*mm , width=200*mm ,  height=270*mm, preserveAspectRatio=False)
 
     if(experiencia_foto == "No"):
-        fotoia = ImageReader('./imagesPDF/avatar.PNG')
+        fotoia = ImageReader('./imagesPDF/avatar.png')
         c.drawImage(fotoia, 40*mm, 190*mm , width=200*mm ,  height=200*mm, preserveAspectRatio=False)
         prom = ""
 
